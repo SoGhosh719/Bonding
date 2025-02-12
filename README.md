@@ -27,5 +27,8 @@ Bonding is a community-driven web platform designed for chemistry enthusiasts, s
 The app will be available at http://localhost:3000
 
 ### 📧 Contact
-📍 Created by Soumyabrata Ghosh
-📧 Email: soumyabrata11411@gmail.com
+
+Email: soumyabrata11411@gmail.com
+
+LinkendIn: https://www.linkedin.com/in/soumyabrata-ghosh-205673290/
+
