@@ -1,21 +1,32 @@
-// Import the functions you need from the SDKs you need
+// Import Firebase SDK functions
 import { initializeApp } from "firebase/app";
+import { getAuth, GoogleAuthProvider } from "firebase/auth";
+import { getFirestore } from "firebase/firestore";
 import { getAnalytics } from "firebase/analytics";
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
 
 // Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: "AIzaSyDPTKtVav9dZ36ZQS5tuUQXqxZ4ZnQOv4Q",
-  authDomain: "bondingapp-1fbcf.firebaseapp.com",
-  projectId: "bondingapp-1fbcf",
-  storageBucket: "bondingapp-1fbcf.firebasestorage.app",
-  messagingSenderId: "120363463977",
-  appId: "1:120363463977:web:ec8d04b8307a3ae8883338",
-  measurementId: "G-SSRVF4KTVF"
+  apiKey: "AIzaSyB_nPEyaxES5uswl9lzCfMYeb618a48Ojw",
+  authDomain: "bonding-f2d8d.firebaseapp.com",
+  projectId: "bonding-f2d8d",
+  storageBucket: "bonding-f2d8d.firebasestorage.app",
+  messagingSenderId: "257752909599",
+  appId: "1:257752909599:web:c75f54ff9f5ccc367b122a",
+  measurementId: "G-DWG4PPJ978"
 };
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
+
+// Initialize Firebase Authentication
+const auth = getAuth(app);
+const provider = new GoogleAuthProvider();
+
+// Initialize Firestore Database
+const db = getFirestore(app);
+
+// Initialize Analytics (optional)
 const analytics = getAnalytics(app);
+
+// Export Firebase functions for use in your app
+export { auth, provider, db, analytics };
